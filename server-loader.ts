@@ -290,8 +290,8 @@ export abstract class ServerLoader {
         return function(req: Express.Request, res: Express.Response, next: Express.NextFunction): any {
 
             for (let i = 0; i < mimes.length; i++) {
-                if (!req.accepts(mimes[0])) {
-                    throw new NotAcceptable(mimes[0]);
+                if (!req.accepts(mimes[i])) {
+                    throw new NotAcceptable(mimes[i]);
                 }
             }
 
